@@ -3,9 +3,8 @@ var app = new Vue({
     data: {
         toDos: [
             'Fare i Compiti',
-            'Fare i Spesa',
-            'Fare i Bucato'
-
+            'Fare la Spesa',
+            'Fare il Bucato'
         ]
 
     }
