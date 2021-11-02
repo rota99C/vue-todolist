@@ -13,9 +13,16 @@
         <div id="container">
             <img src="./img/logo.png" alt="">
             <div class="task-input">
-                <input class="input1" placeholder="Nuovo Todo" type="Nuovo
+                <input @keyup.enter="submit" class="input1"
+                    placeholder="Nuovo Todo" type="Nuovo
                     titolo">
                 <button @click="submit">Aggiungi</button>
+            </div>
+            <div class="short" v-if="short">
+                <p>Scrivi almeno 4 caratteri</p>
+            </div>
+            <div class="nothing" v-if="nothing">
+                <p>Non hai più niente da fare!</p>
             </div>
             <div class="list-container">
                 <ul>
