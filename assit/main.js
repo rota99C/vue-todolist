@@ -7,8 +7,8 @@ var app = new Vue({
             'Fare il Bucato'
         ],
         nothing: false,
-        short: false
-
+        short: false,
+        completedTasks: []
     },
     methods: {
         removeTask(index) {
@@ -32,7 +32,21 @@ var app = new Vue({
             } else {
                 this.toDos.push(yourTask)
             }
+        },
+        taskCompleted(index) {
+            let completed = this.toDos.splice(index, 1)
+            // console.log(completed);
+            this.completedTasks.push(completed)
+            // console.log(this.completedTasks);
+        },
+
+        restoreTask(index) {
+            let prova = this.completedTasks.splice(index, 1)
+            this.toDos.push(this.prova)
         }
+
+
+
 
 
 

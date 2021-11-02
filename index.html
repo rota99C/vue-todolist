@@ -27,10 +27,26 @@
             <div class="list-container">
                 <ul>
                     <li v-for="toDo in toDos">
-                        {{toDo}}
-                        <i @click="removeTask (index)" class="fas fa-times"></i>
+                        <p contenteditable="true">{{toDo}}</p>
+                        <div>
+                            <i @click="removeTask(index)" class="fas fa-times"></i>
+                            <!-- <i @click="modifyTask" class="fas fa-edit"></i> -->
+                            <i @click="taskCompleted(index)" class="fas
+                                fa-check"></i>
+                        </div>
+
                     </li>
                 </ul>
+            </div>
+            <div class="list-container">
+                <ul>
+                    <li v-for="completedTask in completedTasks">
+                        <p>{{completedTask}}</p>
+                        <i @click="restoreTask" class="fas fa-undo-alt"></i>
+                    </li>
+                </ul>
+
+
             </div>
 
 

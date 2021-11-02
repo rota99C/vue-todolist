@@ -48,11 +48,19 @@ button {
   padding: 10px;
 }
 
+.list-container p {
+  width: 80%;
+}
+
 .list-container {
   background-color: #f5f7f7;
   width: 650px;
   padding: 50px;
-  margin: 50px;
+  margin-top: 50px;
+}
+
+.list-container i {
+  margin: 3px;
 }
 
 .nothing,
